@@ -1,0 +1,30 @@
+# ============================================================
+# F1 Data Hub — Dépendances Python
+# Installation : pip install -r requirements.txt
+# ============================================================
+
+# ── Collecte de données ──────────────────────────────────────
+requests==2.31.0              # Appels API REST (OpenF1, jolpi.ca)
+beautifulsoup4==4.12.2        # Web scraping HTML
+lxml==4.9.3                   # Parser HTML/XML rapide pour BeautifulSoup
+
+# ── Traitement des données ───────────────────────────────────
+pandas==2.1.0                 # Manipulation de DataFrames
+numpy==1.26.0                 # Calculs numériques
+
+# ── Base de données ──────────────────────────────────────────
+sqlalchemy==2.0.20            # ORM et connexion BDD (SQLite + PostgreSQL)
+psycopg2-binary==2.9.9        # Driver PostgreSQL (optionnel, mode sqlite par défaut)
+
+# ── Machine Learning ─────────────────────────────────────────
+scikit-learn==1.3.2           # Modèles ML, validation, métriques
+
+# ── Dashboard ────────────────────────────────────────────────
+streamlit==1.28.0             # Interface web interactive
+plotly==5.17.0                # Graphiques interactifs
+
+# ── Configuration ────────────────────────────────────────────
+python-dotenv==1.0.0          # Chargement du fichier .env
+
+# ── Utilitaires ──────────────────────────────────────────────
+tqdm==4.66.1                  # Barres de progression (optionnel)
