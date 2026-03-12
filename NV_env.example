@@ -1,0 +1,35 @@
+# ============================================================
+# F1 DATA HUB — Configuration environnement
+# Copier ce fichier en .env et remplir les valeurs
+# Ne jamais committer .env dans git !
+# ============================================================
+
+# ── BASE DE DONNÉES ──────────────────────────────────────────
+# Mode développement (SQLite, aucune config nécessaire)
+DB_MODE=sqlite
+
+# Mode production (PostgreSQL)
+# DB_MODE=postgresql
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=f1_hub
+POSTGRES_USER=f1_user
+POSTGRES_PASSWORD=your_secure_password_here
+
+# ── SAISONS À COLLECTER ──────────────────────────────────────
+# Séparées par des virgules
+SEASONS=2022,2023,2024
+
+# ── PARAMÈTRES DE COLLECTE ───────────────────────────────────
+# Délai entre requêtes API (secondes) — respecter les rate limits
+API_DELAY=0.3
+
+# Nombre de GPs max par saison (0 = tous)
+MAX_ROUNDS=0
+
+# ── MODÈLE IA ────────────────────────────────────────────────
+# Chemin de sauvegarde du modèle entraîné
+MODEL_PATH=data/models/winner_predictor.pkl
+
+# Seuil de probabilité minimum pour afficher une prédiction
+PREDICTION_THRESHOLD=0.15
